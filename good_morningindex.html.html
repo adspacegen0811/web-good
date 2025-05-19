@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning Greeting</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff6347;
+        }
+        p {
+            font-size: 1.2em;
+            color: #4682b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Good Morning!</h1>
+    <p id="greeting"></p>
+
+    <script>
+        const now = new Date();
+        const hour = now.getHours();
+        let greetingMessage;
+
+        if (hour < 12) {
+            greetingMessage = "Have a wonderful day ahead, from adwait!";
+        } else {
+            greetingMessage = "Hope you're having a great day,from adwait!";
+        }
+
+        document.getElementById("greeting").textContent = greetingMessage;
+    </script>
+</body>
+</html>
